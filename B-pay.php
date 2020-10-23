@@ -77,14 +77,14 @@ class ProcessPayment {
     
 }
 
-$pp = new ProcessPayment();
-$pp->addDev("d270298c22d999895d58a1e9fd9d0751");
-$pp->addProduct(200000, 2,"techno","telphone techno");
-$pp->addProduct(10000, 5,"tshirt","telphone t-shirt");
-$pp->addP_info("cdf","16");
-$pp->addBill_to("0817777777");
-$pp->addRun_env("json");
-echo $pp->commit();
+// $pp = new ProcessPayment();
+// $pp->addDev("d270298c22d999895d58a1e9fd9d0751");
+// $pp->addProduct(200000, 2,"techno","telphone techno");
+// $pp->addProduct(10000, 5,"tshirt","telphone t-shirt");
+// $pp->addP_info("cdf","16");
+// $pp->addBill_to("0817777777");
+// $pp->addRun_env("json");
+// echo $pp->commit();
 
 
 ?>
