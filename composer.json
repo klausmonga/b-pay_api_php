@@ -1,0 +1,17 @@
+{
+    "name": "b-pay/api",
+    "description": "this library is a wrapper code for our b-pay api",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "klausmonga",
+            "email": "klaus@bvortex.com"
+        }
+    ],
+    "minimum-stability": "stable",
+    "autoload": {
+        "psr-4": {"b-pay\\api\\": "src/"}
+    },
+    "require": {}
+}
