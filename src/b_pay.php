@@ -1,6 +1,6 @@
 <?php
 
-namespace bpay\api;
+namespace b_pay\api;
 
 class ProcessPayment {
     private $dev;
