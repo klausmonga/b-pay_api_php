@@ -14,8 +14,8 @@ class ProcessPayment {
         return $this->dev;
     }
 
-    public function addDev($md5) {
-        $this->dev = "\"dev\":{\"md5\":\"".$md5."\"}";
+    public function addDev($dev_key, $business_key) {
+        $this->dev = "\"dev\":{\"dev_key\":\"".$dev_key."\",\"business_key\":\"".$business_key."\"}";
     }
 
     public function getBill_to() {
@@ -62,7 +62,7 @@ class ProcessPayment {
     public function commit(){                                                                    
         $data_string = $this->getTrans();                                                                                   
                                                                                                                             
-        $ch = curl_init('http://cloudbpay.bvortex.com/index.php/Api/process_payment');                                                                      
+        $ch = curl_init('http://localhost/bpay/index.php/Api/process_payment');                                                                      
         curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "POST");                                                                     
         curl_setopt($ch, CURLOPT_POSTFIELDS, $data_string);                                                                  
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);                                                                      
@@ -78,7 +78,7 @@ class ProcessPayment {
 }
 
 // $pp = new ProcessPayment();
-// $pp->addDev("d270298c22d999895d58a1e9fd9d0751");
+// $pp->addDev("d270298c22d999895d58a1e9fd9d0751","25514091a0be0ebc9833c88e5e36cbdb");
 // $pp->addProduct(100, 1,"techno","telphone techno");
 // $pp->addProduct(3, 1,"tshirt","telphone t-shirt");
 // $pp->addP_info("cdf","0");
