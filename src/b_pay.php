@@ -62,7 +62,7 @@ class ProcessPayment {
     public function commit(){                                                                    
         $data_string = $this->getTrans();                                                                                   
                                                                                                                             
-        $ch = curl_init('http://localhost/bpay/index.php/Api/process_payment');                                                                      
+        $ch = curl_init('http://cloudbpay.bvortex.com/index.php/Api/process_payment');                                                                      
         curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "POST");                                                                     
         curl_setopt($ch, CURLOPT_POSTFIELDS, $data_string);                                                                  
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);                                                                      
